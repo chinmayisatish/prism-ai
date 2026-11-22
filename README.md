@@ -9,6 +9,8 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Gemini_1.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchinmayisatish%2Fprism-ai)
+
 **Analyze. Review. Improve.**  
 *An autonomous, production-grade AI agent that ingests GitHub pull requests, executes deterministic AST/static analysis, detects security vulnerabilities and prompt injection attempts, and delivers verified, zero-hallucination code reviews with Gemini.*
 
