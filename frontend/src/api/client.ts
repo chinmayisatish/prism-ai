@@ -1,6 +1,6 @@
 import type { ReviewReport, HistoryItem, DemoItem } from '../types';
 
-const API_BASE = "http://127.0.0.1:8000/api";
+const API_BASE = "/api";
 
 export async function validateInput(repoUrl: string, prNumber?: number, demoId?: string) {
   const res = await fetch(`${API_BASE}/validate`, {
