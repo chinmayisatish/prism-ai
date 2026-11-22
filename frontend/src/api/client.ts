@@ -1,6 +1,7 @@
 import type { ReviewReport, HistoryItem, DemoItem } from '../types';
 
-const API_BASE = "/api";
+const rawBase = import.meta.env.VITE_API_BASE_URL;
+const API_BASE = rawBase ? `${rawBase.replace(/\/+$/, '')}/api` : "/api";
 
 export async function validateInput(repoUrl: string, prNumber?: number, demoId?: string) {
   const res = await fetch(`${API_BASE}/validate`, {

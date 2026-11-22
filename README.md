@@ -11,6 +11,12 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchinmayisatish%2Fprism-ai)
 
+### 🌐 Live Production Deployments
+- **🚀 Production App (Vercel):** [https://prism-ai-pied.vercel.app](https://prism-ai-pied.vercel.app)
+- **⚡ Frontend Mirror (GitHub Pages):** [https://chinmayisatish.github.io/prism-ai/](https://chinmayisatish.github.io/prism-ai/)
+- **🩺 API Health Status:** [https://prism-ai-pied.vercel.app/api/health](https://prism-ai-pied.vercel.app/api/health)
+- **📋 Demo Scenarios API:** [https://prism-ai-pied.vercel.app/api/demos](https://prism-ai-pied.vercel.app/api/demos)
+
 **Analyze. Review. Improve.**  
 *An autonomous, production-grade AI agent that ingests GitHub pull requests, executes deterministic AST/static analysis, detects security vulnerabilities and prompt injection attempts, and delivers verified, zero-hallucination code reviews with Gemini.*
 
