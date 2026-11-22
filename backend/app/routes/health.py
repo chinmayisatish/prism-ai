@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from app.config import settings
 from app.models.database import init_db
 
-router = APIRouter(prefix="/api", tags=["Health & Status"])
+router = APIRouter(tags=["Health & Status"])
 
 @router.get("/health")
 async def health_check():

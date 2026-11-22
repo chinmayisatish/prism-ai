@@ -6,7 +6,7 @@ from app.services.agent_orchestrator import AgentOrchestrator
 from app.services.security_guard import parse_and_validate_github_url
 from app.services.mock_data import get_demo_list
 
-router = APIRouter(prefix="/api", tags=["Pull Request Reviews"])
+router = APIRouter(tags=["Pull Request Reviews"])
 
 @router.post("/validate")
 async def validate_input(request: PRReviewRequest):

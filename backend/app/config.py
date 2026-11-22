@@ -10,6 +10,14 @@ if env_path.exists():
 else:
     load_dotenv()
 
+def _resolve_database_path() -> str:
+    env_val = os.getenv("DATABASE_PATH")
+    if env_val:
+        return env_val
+    if os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_FUNCTION_NAME") or not os.access(".", os.W_OK):
+        return "/tmp/prism_ai.db"
+    return "prism_ai.db"
+
 class Settings(BaseModel):
     PROJECT_NAME: str = "PRISM AI"
     VERSION: str = "1.0.0"
@@ -25,7 +33,7 @@ class Settings(BaseModel):
     DEBUG: bool = os.getenv("DEBUG", "True").lower() in ("true", "1", "yes")
     
     # Database
-    DATABASE_PATH: str = os.getenv("DATABASE_PATH", "prism_ai.db")
+    DATABASE_PATH: str = _resolve_database_path()
     
     # Gemini Model configuration
     # Supports gemini-2.5-flash, gemini-1.5-flash, gemini-1.5-pro

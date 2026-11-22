@@ -20,8 +20,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register API routers
+# Register API routers with both /api and root paths so all rewrites succeed
+app.include_router(pr_router, prefix="/api")
 app.include_router(pr_router)
+app.include_router(health_router, prefix="/api")
 app.include_router(health_router)
 
 def seed_initial_history():
@@ -185,8 +187,11 @@ def seed_initial_history():
 
 @app.on_event("startup")
 def on_startup():
-    init_db()
-    seed_initial_history()
+    try:
+        init_db()
+        seed_initial_history()
+    except Exception as e:
+        print(f"Startup warning: {e}")
 
 if __name__ == "__main__":
     import uvicorn
